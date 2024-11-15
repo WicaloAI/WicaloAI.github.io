@@ -84,7 +84,7 @@ h6,
 .h6 {
   font-family: var(--heading-font);
   font-weight: var(--heading-font-weight);
-  color: var:#020202;
+  color: var(--heading-color);
   line-height: var(--heading-line-height);
 }
 a {
@@ -577,26 +577,20 @@ a {
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
   -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
   transition: opacity 0.3s 0s, visibility 0s 0s;
-}
-.search-popup-container {
-  background-color: transparent;
-  position: relative;
-  top: 50%;
-  margin: 0 auto;
-  padding: 0;
-  width: 90%;
-  max-width: 800px;
-  text-align: center;
-  box-shadow: none;
-  cursor: default;
-  -webkit-transform: translateY(-40px);
-  transform: translateY(-40px);
-  -webkit-backface-visibility: hidden;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
+  .search-popup-container {
+    background-color: transparent;
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: none;
+    cursor: default;
+    transform: translateY(-40px);
+    transition: transform 0.3s; /* Esta es la forma más sencilla */
+  }  
 .is-visible .search-popup-container {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
